@@ -230,7 +230,7 @@ continuar_programa:; esperamos la cadena jugada y buscamos errores si hay
             limpiar_total:; bucle para limpiar TotalNumeros si da error podemos introducir de nuevo los datos y comparar de nuevo
                 mov BYTE[TotalNumeros + esi], 0
                 inc esi
-                cmp esi, 8  
+                cmp esi, 10  
                 jl limpiar_total
 
             jmp _start
@@ -277,7 +277,7 @@ PedirCadena:;para que el jugador introduzca cadena a comprobar
             
           
             mov ecx, TotalCADENAColores ; leemos cadena a comprobar
-            mov edx, 7
+            mov edx, 10
             Call Leer
 
             mov ecx, poslimp
